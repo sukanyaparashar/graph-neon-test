@@ -1,0 +1,28 @@
+specVersion: 0.0.4
+description: Gravatar for Ethereum
+repository: https://github.com/sukanyaparashar/graph-neon-test
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Gravity
+    network: neonlabs
+    source:
+      address: "0x84007b2E770b31aB799776998e1b0A9e6B955EF3"
+      abi: Gravity
+      startBlock: 245357717
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Gravatar
+      abis:
+        - name: Gravity
+          file: ./abis/Gravity.json
+      eventHandlers:
+        - event: NewGravatar(uint256,address,string,string)
+          handler: handleNewGravatar
+        - event: UpdatedGravatar(uint256,address,string,string)
+          handler: handleUpdatedGravatar
+      file: ./src/mapping.ts
