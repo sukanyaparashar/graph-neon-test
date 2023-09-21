@@ -5,10 +5,10 @@ This repository will help in understanding implementation of a subgraph on Neon 
 
 ## Graph node credentials for Neon Devnet
 
-Graph endpoint: https://ch2-graph.neontest.xyz/deploy/
-Graph endpoint for deploying subgraph: https://ch2-graph.neontest.xyz/deploy/
-Endpoint for graphql: https://ch2-graph.neontest.xyz/index-node/graphql
-IPFS Address: https://ch-ipfs.neontest.xyz/
+- Graph endpoint: https://ch2-graph.neontest.xyz/deploy/
+- Graph endpoint for deploying subgraph: https://ch2-graph.neontest.xyz/deploy/*
+- Endpoint for graphql: https://ch2-graph.neontest.xyz/index-node/graphql
+- IPFS Address: https://ch-ipfs.neontest.xyz/
 
 ## Steps to follow:
 
