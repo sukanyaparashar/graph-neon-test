@@ -3,6 +3,14 @@
 An example to help you get started with The Graph. For more information see the docs on https://thegraph.com/docs/.
 This repository will help in understanding implementation of a subgraph on Neon Devnet.
 
+## Prerequisites
+
+To install Graph CLI globally, run this -
+
+```
+npm install -g @graphprotocol/graph-cli
+```
+
 ## Graph node credentials for Neon Devnet
 
 - Graph endpoint: https://ch2-graph.neontest.xyz/
@@ -25,9 +33,9 @@ PRIVATE_KEY_3=0x...
 3. Run the following commands to install the required packages, compile the Gravatar smart contract and deploy the contract on Neon Devnet.
 
 ```
-$ npm install
-$ truffle compile
-$ truffle migrate --network neonlabs
+npm install
+truffle compile
+truffle migrate --network neonlabs
 ```
 
 4. After getting the contract address and block number from the migration step above, replace the “address” and “startBlock” properties in the “subgraph.yaml” file with the corresponding values.
@@ -35,10 +43,10 @@ $ truffle migrate --network neonlabs
 5. For deploying a subgraph on Neon Devnet, run the following commands -
 
 ```
-$ graph create neonlabs/test-subgraph-neon --node https://ch2-graph.neontest.xyz/deploy/
-$ graph codegen
-$ graph build
-$ graph deploy neonlabs/test-subgraph-neon --ipfs https://ch-ipfs.neontest.xyz --node https://ch2-graph.neontest.xyz/deploy/ --version-label="v0.0.1"
+graph create neonlabs/test-subgraph-neon --node https://ch2-graph.neontest.xyz/deploy/
+graph codegen
+graph build
+graph deploy neonlabs/test-subgraph-neon --ipfs https://ch-ipfs.neontest.xyz --node https://ch2-graph.neontest.xyz/deploy/ --version-label="v0.0.1"
 ```
 
 6. Open the HTTP link from the above result - https://ch2-graph.neontest.xyz/subgraphs/name/neonlabs/test-subgraph-neon
